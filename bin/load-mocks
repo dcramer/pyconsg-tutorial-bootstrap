@@ -1,0 +1,30 @@
+#!/usr/bin/env python
+
+
+def main():
+    from blog.config import create_app, db
+    from blog.models import Post
+
+    print("Loading mock fixtures")
+    app = create_app()
+    with app.app_context():
+        post1 = Post(
+            title='Hello world!',
+            body='Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        )
+        db.session.add(post1)
+        print("- Created post {0}".format(post1.id))
+
+        post2 = Post(
+            title='Hello world (again)!',
+            body='Integer ullamcorper erat ac aliquam mollis.',
+        )
+        db.session.add(post2)
+        print("- Created post {0}".format(post2.id))
+
+        db.session.commit()
+    print("Done")
+
+
+if __name__ == '__main__':
+    main()
