@@ -1,0 +1,15 @@
+.coverage
+.DS_Store
+.idea
+*.db
+*.egg-info
+*.pyc
+npm-debug.log
+/env
+/*.xml
+/docs/_build/
+/htmlcov
+/node_modules
+/dist
+/static/vendor
+.vagrant

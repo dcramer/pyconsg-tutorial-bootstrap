@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+
+
+def main():
+    from blog.config import create_app, db
+
+    import blog.models
+
+    app = create_app()
+    print("Creating database '{0}'".format(app.config['SQLALCHEMY_DATABASE_URI']))
+    with app.app_context():
+        db.create_all()
+    print("Done")
+
+
+if __name__ == '__main__':
+    main()

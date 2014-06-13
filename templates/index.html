@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <base href="{{ url_for('static', filename='partials/') }}">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog</title>
+
+    <link href="{{ url_for('static', filename='vendor/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" media="screen">
+
+    <script src="{{ url_for('static', filename='vendor/angular/angular.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </head>
+  <body ng-app="blog">
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <section class="container">
+      <header>
+        <h1><a href="/#/">My Blog</a></h1>
+      </header>
+
+      <section ng-view></section>
+
+      <footer>&copy; My Blog</footer>
+    </section>
+  </body>
+</html>
