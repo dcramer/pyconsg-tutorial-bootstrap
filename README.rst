@@ -1,3 +1,5 @@
+Slides: http://bit.ly/1pHGAyK
+
 Setup the environment:
 
 ::
