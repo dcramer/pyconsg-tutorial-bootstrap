@@ -1,0 +1,63 @@
+header {
+  position: relative;
+}
+
+header .loading {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  right: 0;
+  font-size: 26px;
+  color: #aaa;
+}
+
+header .loading .spinner-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 32px;
+}
+
+footer {
+  padding: 50px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.spinner-icon {
+  width: 14px;
+  height: 14px;
+
+  margin: 0 auto;
+
+  border:  solid 2px transparent;
+  border-top-color:  #428bca;
+  border-left-color: #428bca;
+  border-radius: 10px;
+
+  -webkit-animation: loading-bar-spinner 600ms linear infinite;
+  -moz-animation:    loading-bar-spinner 600ms linear infinite;
+  -ms-animation:     loading-bar-spinner 600ms linear infinite;
+  -o-animation:      loading-bar-spinner 600ms linear infinite;
+  animation:         loading-bar-spinner 600ms linear infinite;
+}
+
+@-webkit-keyframes loading-bar-spinner {
+  0%   { -webkit-transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-moz-keyframes loading-bar-spinner {
+  0%   { -moz-transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { -moz-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-o-keyframes loading-bar-spinner {
+  0%   { -o-transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-ms-keyframes loading-bar-spinner {
+  0%   { -ms-transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { -ms-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@keyframes loading-bar-spinner {
+  0%   { transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { transform: rotate(360deg); transform: rotate(360deg); }
+}

@@ -2,8 +2,8 @@ Setup the environment:
 
 ::
 
-	virtualenv /tmp/pyconsg
-	source /tmp/pyconsg/bin/activate
+	virtualenv ./env
+	source ./env/bin/activate
 
 
 Install dependencies:

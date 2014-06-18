@@ -12,8 +12,15 @@
     <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" media="screen">
 
     <script src="{{ url_for('static', filename='vendor/angular/angular.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/angular-route/angular-route.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/angular-sanitize/angular-sanitize.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/showdown/src/showdown.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/moment/moment.js') }}"></script>
 
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/controllers.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/directives.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/services.js') }}"></script>
   </head>
   <body ng-app="blog">
     <!--[if lt IE 7]>
@@ -23,6 +30,10 @@
     <section class="container">
       <header>
         <h1><a href="/#/">My Blog</a></h1>
+
+        <div class="loading" ng-show="loading">
+          <div class="spinner-icon"></div>
+        </div>
       </header>
 
       <section ng-view></section>

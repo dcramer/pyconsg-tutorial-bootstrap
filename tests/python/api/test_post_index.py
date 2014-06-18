@@ -34,7 +34,20 @@ def test_list(client):
 
 
 def test_create_with_valid_params(client):
-    pass
+    title = 'Foo'
+    body = 'Bar'
+
+    # valid params
+    resp = client.post('/api/0/posts/', data={
+        'title': title,
+        'body': body,
+    }, follow_redirects=True)
+    assert resp.status_code == 201
+
+    data = json.loads(resp.data.decode('utf-8'))
+
+    assert data['title'] == title
+    assert data['body'] == body
 
 
 def test_create_with_invalid_params(client):

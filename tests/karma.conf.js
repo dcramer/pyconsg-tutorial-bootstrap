@@ -5,8 +5,8 @@ module.exports = function(config){
 
     files: [
       'static/vendor/angular/angular.js',
-      // 'static/vendor/angular-route/angular-route.js',
-      // 'static/vendor/angular-mocks/angular-mocks.js',
+      'static/vendor/angular-route/angular-route.js',
+      'static/vendor/angular-mocks/angular-mocks.js',
       'static/js/**/*.js',
       'tests/js/**/*.js'
     ],

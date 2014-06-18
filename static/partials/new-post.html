@@ -1,0 +1,18 @@
+<form role="role" name="postForm" ng-submit="saveForm()">
+  <input type="text"
+         name="title"
+         ng-model="formData.title"
+         ng-class="{error: !postForm.title.$valid}"
+         class="form-control"
+         required>
+
+  <textarea name="body"
+            ng-model="formData.body"
+            ng-class="{error: !postForm.body.$valid}"
+            class="form-control"
+            required></textarea>
+
+  <button class="btn"
+          type="submit"
+          ng-disabled="postForm.$invalid">Publish</button>
+</form>

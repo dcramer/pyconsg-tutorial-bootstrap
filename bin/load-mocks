@@ -13,6 +13,7 @@ def main():
             body='Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         )
         db.session.add(post1)
+        db.session.flush()
         print("- Created post {0}".format(post1.id))
 
         post2 = Post(
@@ -20,6 +21,7 @@ def main():
             body='Integer ullamcorper erat ac aliquam mollis.',
         )
         db.session.add(post2)
+        db.session.flush()
         print("- Created post {0}".format(post2.id))
 
         db.session.commit()

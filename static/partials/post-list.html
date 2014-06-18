@@ -1,0 +1,6 @@
+<ul>
+  <li ng-repeat="post in postList">
+    <a href="/#/posts/{{ post.id }}">{{ post.title }}</a>
+    &mdash; <span time-since="post.pubDate"></span>
+  </li>
+</ul>
